@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    environment:
+      START_PATH: ./dist/start.js
+    networks:
+      - backend
+    ports:
+      - "0.0.0.0:49160:3030"
+networks:
+  backend:
+    driver: bridge

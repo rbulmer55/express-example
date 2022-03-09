@@ -1,0 +1,20 @@
+image: node:14
+stages:
+  - build
+  - test
+  - deploy
+  - e2e-tests
+#
+# BUILD #
+#
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  cache:
+    key: $CI_COMMIT_REF_SLUG
+    paths:
+      - node_modules/
+  tags:
+    - omg-gitlab-runner

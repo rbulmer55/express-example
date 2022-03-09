@@ -1,0 +1,30 @@
+{
+    // base tsconfig config
+    "compilerOptions": {
+        "declaration": true,
+        "declarationMap": true,
+        "target": "es5",
+        "removeComments": true,
+        "noUnusedLocals": true,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "preserveConstEnums": true,
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "strict": true,
+        "outDir": ".dist",
+        "noImplicitAny": false,
+        "incremental": true,
+        "watch": false,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true
+    },
+    "typedocOptions": {
+        "out": "docs",
+        "highlightTheme": "dark-plus",
+        "exclude": "**/*+(index|.spec|.e2e|.int).ts",
+        "externalPattern": "lib/**/*.ts"
+    },
+    "exclude": ["**/__mocks__/*", "**/__tests__/*"]
+}
